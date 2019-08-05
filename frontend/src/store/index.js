@@ -7,34 +7,34 @@ import {
   SET_APPS
 } from './mutation-types.js'
 Vue.use(Vuex)
-// Состояние
+// State
 const state = {
-  webapps: []  // список заметок
+  webapps: []  // webapp list
 }
-// Геттеры
+// Getters
 const getters = {
-    webapps: state => state.webapps, // получаем список заметок из состояния
+    webapps: state => state.webapps,
 
 }
-// Мутации
+// Mutations
 const mutations = {
-  // Добавляем заметку в список
+  // Add webapp to list
   [ADD_APP] (state, webapp) {
     state.webapps = [webapp, ...state.webapps]
   },
-  // Убираем заметку из списка
+  // Remove webapp
   [REMOVE_APP] (state, { id }) {
     state.webapps = state.webapps.filter(webapp => {
       return webapp.id !== id
     })
   },
-  // Задаем список заметок
+  // Set webapps
   [SET_APPS] (state, { webapps, reqs }) {
     state.webapps = webapps
     state.reqs = reqs
   }
 }
-// Действия
+// Actions
 const actions = {
   createWebApp ({ commit }, webAppData) {
     WebApp.create(webAppData).then(webApp => {
