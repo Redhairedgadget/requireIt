@@ -1,14 +1,14 @@
 # Option 1: the project is used from zip file
 
-Open two cdm terminals and keep them running  simultaniously 
+Open two cmd terminals and keep them running  simultaniously 
 
-## In cdm window
+## In cmd window
 ```
 cd path\to\project\backend 
 python manage.py runserve
 ```
 
-## In another cdm window
+## In another cmd window
 ```
 cd path\to\project\frontend
 npm run serve
@@ -29,14 +29,14 @@ Go to your browser and open window with http://localhost:8080/ as address (it wi
 You need Node.js, npm and Python3 installed.
 
 ## Install dependencies for front end
-In cdm window:
+In cmd window:
 ```
 cd path\to\project\frontend npm install
 ```
 
 ## Install dependencies for back end
 
-In cdm window:
+In cmd window:
 ```
 cd path\to\project\backend pip install -r requirements.txt
 ```
